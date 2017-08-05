@@ -13,7 +13,13 @@ rm /tmp/erlang-solutions_1.0_all.deb
 sudo apt-get update
 sudo apt-get install elixir
 
-
+# Run an interactive shell
+iex
 ```
 
 These steps are from https://community.c9.io/t/writing-an-elixir-app/4881
+
+## Notes
+I'm adding various notes I take to [[NOTES.md]].
+
+Have fun!
