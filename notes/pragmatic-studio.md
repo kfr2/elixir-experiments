@@ -173,3 +173,28 @@ However, a map is *not* a struct:
 ```
 %Servy.Conv{method: "GET"} = %{method: "GET"}  # MatchError
 ```
+
+
+## Handling POST Requests
+
+The cons operator (|) can be used to split a list into its head and tail.
+
+```
+[head | tail] = [1, 2, 3, 4, 5]
+head = 1
+tail = [2, 3, 4, 5]
+
+[head | tail] = [5]
+head = 5
+tail = []
+```
+
+Cons can also be used to create a list.
+nums = [1 | [2, 3]]  # [1, 2, 3]
+[0 | nums]  # [0, 1, 2, 3]
+
+Lists are recursive data structures because they're implemented as a series of linked lists.
+
+`hd` and `tl` can be used to access the head and tail of a list, respectively.
+
+Atoms are not garbage collected inside of elixir so be careful with allowing the outside environment to create them (for instance, by reading POST body parameters into them instead of strings) because it can lead to EOM.
