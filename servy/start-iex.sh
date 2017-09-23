@@ -1,2 +1,2 @@
-#!/bin/bash
-iex -S mix
+#!/bin/sh
+iex --werl $@
